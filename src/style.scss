@@ -1,0 +1,138 @@
+@media only screen and (max-width: 1040px) {
+    @mixin display {
+        display: flex;
+    }
+
+.offers{
+        #campaign-logo{
+            width: 65px;
+            height: 65px;
+            border-radius: 18px; 
+        }
+        h1{
+            max-width: 100%;
+            height: 28px;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.47;
+            letter-spacing: -0.46px;
+            color: #000000;
+        }
+        h2{
+            width: 198px;
+            height: 14px;
+            font-family: SFProText;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.13;
+            letter-spacing: -0.32px;
+            color: #009330;
+            margin-top: 1px;
+        }
+        .offerGrid{
+            @include display();
+            flex-direction: column;
+            padding: 2px;
+        }
+        .campaign{
+            @include display();
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+        }
+        .mediagrid{
+            @include display();
+            flex-direction: row;
+            width: 374px;
+            height: 264px;
+            overflow-y: scroll;
+
+                ul{
+                @include display();
+                flex-direction: column;
+                width: 101px;
+                height: 179px;
+                border-radius: 6px;
+                position: relative;
+                float: left;
+                background-position: 50% 50%;
+                background-repeat:   no-repeat;
+                background-size:     cover;
+                }
+                #media {
+                  @include display(); 
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin: 10px 4px;
+                    max-width: 100%;
+                    padding: 0px;
+
+                        #media-access{
+                            display: flex;
+                            flex-direction: row; 
+                            border-radius: 5px;
+                            justify-content: space-between;
+                            color: grey;
+                            width: 100%;
+                            max-width: 300px;
+                            height: 264px;
+                            border: solid 1px #e0eef2;
+
+                            #link-icon{
+                                width: 49px;
+                                height: 47px;
+                                color: white;
+                                background-size: 60px;
+                                background-repeat: no-repeat;
+                                object-fit: contain;
+                                background-image: url("./images/link.png");
+                            }
+                            #download-icon{
+                                width: 49px;
+                                height: 47px;
+                                color: white;
+                                background-size: 18px;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                object-fit: contain;
+                                background-image: url("./images/download.png");
+                                opacity: 0.6;
+                                border-left: solid 1px #e0eef2;
+                            }
+                        }
+                  }
+                }
+        #cover{
+            position: relative;
+            width: 50%;
+            max-width: 300px;
+        }
+        #playbutton {
+            position: absolute; 
+            bottom: 20%; 
+            width: 50%;
+            height: 50%;
+            object-fit: contain;
+            transition: .5s ease;
+            opacity:1;
+            background-image: url("./images/play.png");
+            }
+        .thumbnail{
+            display: block;
+            width: 101px;
+            height: 179px;
+            border-radius: 6px;
+        }
+        #cover:hover .playbutton {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+    
